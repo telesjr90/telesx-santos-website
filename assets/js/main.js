@@ -18,3 +18,19 @@ function updateFeaturedWorks(data) {
     const featuredSection = document.querySelector('.featured-works');
     // Implementar lógica de exibição do conteúdo
 }
+
+// Animações com GSAP
+gsap.from('.hero h2', {
+    duration: 1,
+    y: 50,
+    opacity: 0,
+    ease: 'power3.out'
+});
+
+gsap.from('.hero p', {
+    duration: 1,
+    y: 30,
+    opacity: 0,
+    delay: 0.3,
+    ease: 'power3.out'
+});
