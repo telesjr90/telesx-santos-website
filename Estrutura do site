@@ -1,0 +1,16 @@
+telesxsantos.com/
+├── index.html (Página inicial)
+├── generos/
+│   ├── comedia.html
+│   ├── fantasia.html
+│   └── poesia.html
+├── biografia.html
+├── contato.html
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   ├── js/
+│   │   └── main.js
+│   └── img/
+└── api/
+    └── patreon-integration.js
