@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teles Santos - Escritor</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-    <header class="header">
-        <nav class="nav-main">
-            <div class="logo">
-                <h1>Teles Santos</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Início</a></li>
-                <li class="dropdown">
-                    <a href="#">Gêneros</a>
-                    <ul class="dropdown-content">
-                        <li><a href="/generos/comedia.html">Comédia</a></li>
-                        <li><a href="/generos/fantasia.html">Fantasia</a></li>
-                        <li><a href="/generos/poesia.html">Poesia</a></li>
-                    </ul>
-                </li>
-                <li><a href="/biografia.html">Biografia</a></li>
-                <li><a href="/contato.html">Contato</a></li>
-            </ul>
-            <button class="menu-toggle">☰</button>
-        </nav>
-    </header>
-
-    <main class="container">
-        <section class="hero">
-            <h2>Bem-vindo ao universo literário de Teles Santos</h2>
-            <p>Explorando mundos através da comédia, fantasia e poesia</p>
-        </section>
-
-        <section class="featured-works">
-            <!-- Conteúdo do Patreon será carregado aqui -->
-        </section>
-    </main>
-
-    <footer class="footer">
-        <p>&copy; 2024 Teles Santos. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telesx Santos - Escritor & Criador de Conteúdo</title>
+    
+    <!-- Preload de fontes críticas -->
+    <link 
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    
+    <!-- Font Awesome -->
+    <link 
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    
+    <!-- Estilos críticos inline -->
+    <style>
+      :root {
+        --background-dark: #212428;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--background-dark);
+        min-height: 100vh;
+        opacity: 1 !important;
+      }
+      #root {
+        min-height: 100vh;
+        opacity: 1 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html> 

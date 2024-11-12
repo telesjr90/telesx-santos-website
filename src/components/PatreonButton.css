@@ -1,0 +1,23 @@
+.patreon-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #FF424D;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.patreon-button:hover {
+  background: #E23B45;
+}
+
+.patreon-button img {
+  width: 20px;
+  height: 20px;
+}

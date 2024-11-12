@@ -1,0 +1,44 @@
+.cursor {
+  width: 10px;
+  height: 10px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-follower {
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 1, 79, 0.3);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+}
+
+/* Remova cursor: none do seletor global */
+a, button, input, textarea {
+  cursor: none !important;
+}
+
+/* Adicione hover states específicos */
+a:hover ~ .cursor,
+button:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  background: white;
+  mix-blend-mode: difference;
+}
+
+a:hover ~ .cursor-follower,
+button:hover ~ .cursor-follower {
+  transform: translate(-50%, -50%) scale(0.5);
+  background: var(--primary-color);
+}

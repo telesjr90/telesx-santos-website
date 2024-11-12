@@ -1,20 +1,27 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { gsap } from 'gsap';
+import Hero from './components/Hero';
+import Portfolio from './components/Portfolio';
+import About from './components/About';
+import VideoGallery from './components/VideoGallery';
+import Blog from './components/Blog';
+import Contact from './components/Contact';
 import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Biografia from './pages/Biografia';
-import Contato from './pages/Contato';
-import GeneroPage from './pages/GeneroPage';
+import './styles/global.css';
 
 function App() {
   return (
     <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/biografia" element={<Biografia />} />
-        <Route path="/contato" element={<Contato />} />
-        <Route path="/generos/:genero" element={<GeneroPage />} />
-      </Routes>
+      <div className="app dark-theme">
+        <Navbar />
+        <Hero />
+        <Portfolio />
+        <About />
+        <VideoGallery />
+        <Blog />
+        <Contact />
+      </div>
     </Router>
   );
 }

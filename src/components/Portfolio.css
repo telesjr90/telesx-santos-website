@@ -1,0 +1,100 @@
+.portfolio {
+  padding: 100px 0;
+  background: var(--background-dark);
+}
+
+.portfolio-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: var(--card-dark);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.portfolio-card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  background: var(--card-dark);
+}
+
+.portfolio-img {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 1, 79, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-card:hover .portfolio-img img {
+  transform: scale(1.1);
+}
+
+.portfolio-link {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+  text-decoration: none;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.portfolio-card:hover .portfolio-link {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}

@@ -1,27 +1,105 @@
 :root {
-  --primary-color: #2c3e50;
-  --secondary-color: #3498db;
-  --accent-color: #e74c3c;
-  --text-color: #333;
-  --background-color: #f5f6fa;
+  --primary-color: #ff014f;
+  --background-dark: #212428;
+  --card-dark: #1e2024;
+  --text-light: #c4cfde;
+  --heading-color: #ffffff;
 }
 
-.hero {
-  min-height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/assets/img/hero-bg.jpg');
-  background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 2rem;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.featured-works {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  padding: 4rem 2rem;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--background-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Adicione classes de utilidade para animações */
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Adicione estilos para scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Adicione classes para efeitos hover */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Adicione estilos para links */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Adicione estilos para o container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+/* Adicione após as variáveis root */
+.z-top {
+  position: relative;
+  z-index: 5;
+}
+
+/* Ajuste a opacidade padrão */
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+/* Ajuste de visibilidade e z-index */
+.content-visible {
+  position: relative;
+  z-index: 2;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Ajuste de z-index para elementos importantes */
+.z-top {
+  position: relative;
+  z-index: 10;
+}
+
+/* Transições suaves */
+.fade-transition {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Remova qualquer overlay global */
+body::before,
+body::after {
+  display: none;
+}
+
+/* Força visibilidade do root */
+#root {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
